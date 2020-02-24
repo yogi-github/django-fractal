@@ -1,0 +1,43 @@
+{% block header %}
+  <h1>{% block title %}Fractal Challenge{% endblock %}</h1>
+{% endblock %}
+
+
+{% block survey %}
+    <h2>Surveys</h2>
+    <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Result</th>
+    </tr>
+    {% for survey in data['surveys'] %}
+        <tr>
+            <td> {{ survey['id'] }} </td>
+            <td> {{ survey['name'] }} </td>
+            <td><a href="{{ url_for('my_app.calculate_results', survey_id=survey['id']) }}">Click</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+
+{% block observation %}
+    <h2>Observations</h2>
+    <table>
+    <tr>
+        <th>Id</th>
+        <th>Survey_id</th>
+        <th>Value</th>
+        <th>Frequency</th>
+    </tr>
+    {% for obs in data['observations'] %}
+        <tr>
+            <td> {{ obs['id'] }} </td>
+            <td> {{ obs['survey_id'] }} </td>
+            <td> {{ obs['value'] }} </td>
+            <td> {{ obs['frequency'] }} </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

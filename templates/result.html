@@ -1,0 +1,25 @@
+{% block header %}
+  <h1>{% block title %}Survey Results{% endblock %}</h1>
+{% endblock %}
+
+
+{% block results %}
+    <table>
+    <tr>
+        <th>Survey_Id</th>
+        <th>Observations</th>
+        <th>Mean</th>
+        <th>Median</th>
+        <th>Mode</th>
+    </tr>
+
+    <tr>
+        <td> {{ data['survey_id'] }} </td>
+        <td> {{ data['observation_count'] }} </td>
+        <td> {{ data['mean'] }} </td>
+        <td> {{ data['median'] }} </td>
+        <td> {{ data['mode'] }} </td>
+    </tr>
+
+    </table>
+{% endblock %}
