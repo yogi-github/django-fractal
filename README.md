@@ -11,6 +11,6 @@ Build a Flask web site using a Docker container, managed using docker-compose.  
 •	Use Pytest to create unittests which have full coverage.
 
 
-**Setting up docker and running the service*
+**Setting up docker and running the service**
 
 docker-compose up --build
