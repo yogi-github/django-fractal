@@ -4,5 +4,5 @@ flask-migrate
 flask-script
 flask-serialize
 pytest
-numpy==1.14.3
+numpy==1.22.0
 pymysql
